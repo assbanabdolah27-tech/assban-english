@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff7ed">
+<title>ASSBAN English</title>
+<style>
+:root{--orange:#ff8a24;--deep:#d95d12;--cream:#fff8ee;--ink:#242936;--muted:#8b909b;--line:#eee2d5;--green:#55b96a}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 90% 12%,#ffe4c8 0,transparent 27%),var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink);padding-bottom:105px}
+header{position:sticky;top:0;z-index:5;background:#fffaf3eF;backdrop-filter:blur(14px);border-bottom:1px solid #f0e2d3;padding:15px 18px 12px}
+.top{display:flex;justify-content:space-between;align-items:center}.brand{font-size:21px;font-weight:950;color:var(--deep);letter-spacing:-.5px}.stats{display:flex;gap:8px}.pill{background:white;border:1px solid var(--line);border-radius:22px;padding:7px 12px;font-weight:800;box-shadow:0 3px 10px #8d4c1510}
+main{max-width:650px;margin:auto;padding:18px 17px 30px}.page{display:none;animation:appear .22s ease}.page.active{display:block}@keyframes appear{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}
+h1{font-size:27px;margin:17px 0 5px}h2{font-size:21px;margin:22px 0 12px}.sub{color:var(--muted);margin:0 0 18px;line-height:1.6}
+.hero{position:relative;overflow:hidden;border-radius:29px;background:linear-gradient(130deg,#ff9b32,#ff761e 60%,#ffb54e);color:white;padding:22px 20px;margin:20px 0;box-shadow:0 9px 0 #d96817,0 18px 30px #e8782526}.hero:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:#ffffff16;top:-95px;left:-40px}.hero small{font-weight:800;opacity:.9}.hero h2{font-size:25px;margin:17px 0 7px}.hero p{margin:0;line-height:1.6}.progress{height:10px;background:#ffffff55;border-radius:20px;margin-top:19px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:white;border-radius:20px;transition:width .3s}
+.section-head{display:flex;justify-content:space-between;align-items:center;margin-top:28px}.section-head h2{margin:0}.tag{background:#fff0df;color:#b85412;border-radius:18px;padding:7px 12px;font-weight:850;font-size:13px}
+.path{position:relative;padding:18px 0 12px;display:flex;flex-direction:column;align-items:center;gap:17px}.path:before{content:"";position:absolute;top:28px;bottom:35px;width:8px;border-radius:9px;background:repeating-linear-gradient(to bottom,#ffc27d 0 15px,#ffe4c5 15px 28px);z-index:0}
+.lesson{z-index:1;border:0;width:76px;height:76px;border-radius:50%;background:linear-gradient(145deg,#ffad48,#f47b1d);color:white;font-size:27px;font-weight:900;box-shadow:0 7px 0 #c95c13,0 11px 18px #c95c1325;position:relative;cursor:pointer}.lesson:nth-child(2n){transform:translateX(65px)}.lesson:nth-child(2n+1){transform:translateX(-45px)}.lesson.done{background:linear-gradient(145deg,#72d58a,#39a95c);box-shadow:0 7px 0 #278346,0 11px 18px #27834625}.lesson.locked{background:linear-gradient(145deg,#d9dce1,#aeb4bd);box-shadow:0 7px 0 #8d949e;color:#fff;cursor:not-allowed}.lesson.current:after{content:"ابدأ";position:absolute;white-space:nowrap;right:85px;top:22px;background:white;color:#d95d12;border-radius:15px;padding:6px 11px;font-size:12px;box-shadow:0 3px 12px #0001}
+.card{background:#fff;border:1px solid var(--line);border-radius:23px;padding:17px;margin:12px 0;box-shadow:0 7px 20px #5a34100b}.card h3{margin:0 0 8px;font-size:18px}.muted{color:var(--muted);line-height:1.6}.primary,.secondary{border:0;border-radius:17px;padding:13px 17px;font-size:16px;font-weight:850;cursor:pointer}.primary{background:linear-gradient(135deg,#ff9a32,#f4771d);color:white;box-shadow:0 4px 0 #c95c13}.secondary{background:#fff0df;color:#b85412}.wide{width:100%;margin-top:12px}
+.word{font-size:28px;font-weight:900;color:#d95d12;direction:ltr;text-align:center;margin:10px}.meaning{text-align:center;font-size:18px;font-weight:700}.sound{display:block;margin:12px auto}
+.choice{display:block;width:100%;text-align:right;background:#fff;border:2px solid var(--line);padding:14px;border-radius:16px;margin:9px 0;font-size:16px;font-weight:700;cursor:pointer}.choice.selected{border-color:var(--orange);background:#fff5e9}.choice.correct{border-color:#55b96a;background:#effaf1}.choice.wrong{border-color:#e06a55;background:#fff1ee}
+input,textarea{width:100%;border:1.5px solid var(--line);border-radius:15px;padding:14px;font-size:16px;background:white;margin:8px 0;font-family:inherit}textarea{min-height:110px;resize:vertical}
+.bottom{position:fixed;bottom:calc(12px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:10;width:min(94%,520px);background:#ffffffed;backdrop-filter:blur(18px);border:1px solid #eee0d2;border-radius:25px;box-shadow:0 10px 35px #56300e24;display:flex;justify-content:space-around;padding:8px 6px}.nav{border:0;background:transparent;color:#9699a1;font-size:11px;font-weight:800;display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 12px;cursor:pointer}.nav b{font-size:22px}.nav.active{color:#e66d19}
+.feedback{padding:12px;border-radius:14px;margin-top:12px;font-weight:700;display:none}.feedback.show{display:block}.good{background:#eaf8ed;color:#267b3d}.bad{background:#fff0eb;color:#b54b31}
+.small{font-size:13px;color:var(--muted)}.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.statbox{background:white;border:1px solid var(--line);border-radius:18px;padding:16px;text-align:center}.statbox strong{font-size:25px;color:#d95d12;display:block}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="brand">ASSBAN English</div><div class="stats"><span class="pill">🟠 <b id="xp">0</b></span><span class="pill">🔥 <b id="streak">0</b></span></div></div></header>
+<main>
+<section id="home" class="page active">
+<h1>أكمل رحلتك في الإنجليزية</h1><p class="sub">خطوة صغيرة كل يوم تصنع فرقًا كبيرًا.</p>
+<div class="hero"><small>🏝️ مسار التعلّم · المستوى الأول</small><h2>أساسيات الإنجليزية</h2><p>ابدأ من الجزيرة الأولى وافتح بقية الدروس بالتتابع.</p><div class="progress"><span id="bar"></span></div><div style="display:flex;justify-content:space-between;margin-top:7px;font-weight:900"><span id="percent">0%</span><span id="doneCount">0 / 5 دروس</span></div></div>
+<div class="section-head"><h2>طريق الجزر</h2><span class="tag">الوحدة 01</span></div>
+<div class="path" id="path"></div>
+<div class="card"><h3>💡 نصيحة اليوم</h3><p class="muted">تعلّم خمس كلمات جديدة، ثم استعملها في جمل من إنشائك.</p></div>
+</section>
+<section id="learn" class="page">
+<h1>مركز التعلّم 📚</h1><p class="sub">اختر المجال الذي تريد التدرب عليه.</p>
+<div class="card"><h3>🧠 الكلمات والنطق</h3><p class="muted">تعلّم كلمات أساسية واستمع إلى نطقها.</p><button class="primary wide" onclick="showPage('words')">ابدأ الكلمات</button></div>
+<div class="card"><h3>📖 القواعد</h3><p class="muted">افهم القاعدة من خلال شرح وأمثلة قصيرة.</p><button class="primary wide" onclick="showPage('grammar')">افتح القواعد</button></div>
+<div class="card"><h3>🎧 الاستماع</h3><p class="muted">استمع إلى جملة إنجليزية ثم أجب عن سؤال.</p><button class="primary wide" onclick="showPage('listening')">ابدأ الاستماع</button></div>
+<div class="card"><h3>✍️ الكتابة</h3><p class="muted">اكتب جملة بالإنجليزية واحصل على ملاحظات أولية.</p><button class="primary wide" onclick="showPage('writing')">تدرّب على الكتابة</button></div>
+<div class="card"><h3>📝 اختبار قصير</h3><p class="muted">اختبر فهمك لبعض الكلمات والجمل.</p><button class="primary wide" onclick="showPage('quiz')">ابدأ الاختبار</button></div>
+</section>
+<section id="words" class="page">
+<h1>الكلمات والنطق 🧠</h1><p class="sub">استمع إلى الكلمة وكررها بصوتك.</p>
+<div class="card"><div class="word" id="word">Apple</div><div class="meaning" id="meaning">تفاحة</div><button class="secondary sound" onclick="speakWord()">🔊 استمع إلى النطق</button><p class="small" style="text-align:center" id="example">I eat an apple.</p><button class="primary wide" onclick="nextWord()">الكلمة التالية ←</button></div>
+<button class="secondary" onclick="showPage('learn')">العودة إلى مركز التعلّم</button>
+</section>
+<section id="grammar" class="page">
+<h1>القواعد 📖</h1><p class="sub">درس اليوم: فعل الكينونة (am / is / are).</p>
+<div class="card"><h3>متى نستعملها؟</h3><p class="muted">نستعمل am وis وare للتعبير عن الحالة أو الصفة أو الهوية.</p><p dir="ltr"><b>I am</b> a student. — أنا تلميذ.</p><p dir="ltr"><b>He is</b> happy. — هو سعيد.</p><p dir="ltr"><b>They are</b> friends. — هم أصدقاء.</p></div>
+<div class="card"><h3>تدرّب</h3><p>اختر الكلمة الصحيحة: She ___ happy.</p><button class="choice" onclick="grammarAnswer(this,false)">am</button><button class="choice" onclick="grammarAnswer(this,true)">is</button><button class="choice" onclick="grammarAnswer(this,false)">are</button><div id="grammarFeedback" class="feedback"></div></div>
+<button class="secondary" onclick="showPage('learn')">العودة إلى مركز التعلّم</button>
+</section>
+<section id="listening" class="page">
+<h1>الاستماع 🎧</h1><p class="sub">استمع إلى الجملة ثم اختر معناها.</p>
+<div class="card"><h3 dir="ltr">Good morning. How are you?</h3><button class="secondary sound" onclick="speech('Good morning. How are you?')">🔊 استمع</button><p>ما معنى الجملة؟</p><button class="choice" onclick="listenAnswer(this,false)">مساء الخير، إلى اللقاء.</button><button class="choice" onclick="listenAnswer(this,true)">صباح الخير، كيف حالك؟</button><button class="choice" onclick="listenAnswer(this,false)">أنا أذهب إلى المدرسة.</button><div id="listenFeedback" class="feedback"></div></div>
+<button class="secondary" onclick="showPage('learn')">العودة إلى مركز التعلّم</button>
+</section>
+<section id="writing" class="page">
+<h1>الكتابة ✍️</h1><p class="sub">اكتب جملة بسيطة عن نفسك باللغة الإنجليزية.</p>
+<div class="card"><label for="writingText"><b>اكتب هنا:</b></label><textarea id="writingText" placeholder="My name is ..."></textarea><button class="primary wide" onclick="checkWriting()">تحقق من الجملة</button><div id="writingFeedback" class="feedback"></div><p class="small">ملاحظة: هذا فحص أولي بسيط، وليس تصحيحًا بالذكاء الاصطناعي.</p></div>
+<button class="secondary" onclick="showPage('learn')">العودة إلى مركز التعلّم</button>
+</section>
+<section id="quiz" class="page">
+<h1>اختبار قصير 📝</h1><p class="sub">سؤال واحد في كل مرة.</p>
+<div class="card"><div class="tag" id="quizCount">السؤال 1 من 3</div><h3 id="question" style="margin-top:15px">ما معنى كلمة Book؟</h3><div id="answers"></div><div id="quizFeedback" class="feedback"></div><button id="nextQuiz" class="primary wide" style="display:none" onclick="nextQuestion()">السؤال التالي</button></div>
+<button class="secondary" onclick="showPage('learn')">العودة إلى مركز التعلّم</button>
+</section>
+<section id="progress" class="page">
+<h1>إنجازاتي 🏆</h1><p class="sub">تابع تقدّمك خطوة بخطوة.</p>
+<div class="statgrid"><div class="statbox"><strong id="progressXp">0</strong><span>نقطة</span></div><div class="statbox"><strong id="progressLessons">0 / 5</strong><span>دروس مكتملة</span></div></div>
+<div class="card"><h3>استمر في التعلّم!</h3><p class="muted">كل درس تكمله يفتح لك الدرس الذي يليه. تقدّمك محفوظ على هذا الجهاز.</p></div>
+</section>
+<section id="lesson" class="page">
+<h1 id="lessonTitle">الدرس الأول</h1><p class="sub">أكمل النشاط لفتح الجزيرة التالية.</p>
+<div class="card"><h3 id="lessonPrompt">اختر الترجمة الصحيحة: Hello</h3><div id="lessonChoices"></div><div id="lessonFeedback" class="feedback"></div><button id="completeLesson" class="primary wide" style="display:none" onclick="completeCurrentLesson()">إكمال الدرس وفتح التالي</button></div>
+</section>
+</main>
+<nav class="bottom">
+<button class="nav active" data-page="home" onclick="showPage('home')"><b>🏝️</b>المسار</button>
+<button class="nav" data-page="learn" onclick="showPage('learn')"><b>📚</b>التعلّم</button>
+<button class="nav" data-page="progress" onclick="showPage('progress')"><b>🏆</b>إنجازاتي</button>
+</nav>
+<script>
+const lessons=[
+{title:"التحيات",prompt:"ما معنى Hello؟",choices:["وداعًا","مرحبًا","شكرًا"],correct:1},
+{title:"التعارف",prompt:"ما معنى My name is Ali؟",choices:["اسمي علي","أين علي؟","أنا أحب علي"],correct:0},
+{title:"الأشياء",prompt:"ما معنى Book؟",choices:["قلم","باب","كتاب"],correct:2},
+{title:"الأرقام",prompt:"ما معنى Three؟",choices:["اثنان","ثلاثة","أربعة"],correct:1},
+{title:"جمل بسيطة",prompt:"اختر الجملة الصحيحة: أنا طالب",choices:["I student","I am a student","I is student"],correct:1}
+];
+let state={xp:0,done:[],wordIndex:0,quizIndex:0,quizScore:0};
+try{state={...state,...JSON.parse(localStorage.getItem("assbanEnglishState")||"{}")}}catch(e){}
+function save(){localStorage.setItem("assbanEnglishState",JSON.stringify(state));updateStats()}
+function updateStats(){document.getElementById("xp").textContent=state.xp;document.getElementById("progressXp").textContent=state.xp;document.getElementById("streak").textContent=state.done.length?1:0;document.getElementById("progressLessons").textContent=state.done.length+" / 5";document.getElementById("doneCount").textContent=state.done.length+" / 5 دروس";let p=Math.round(state.done.length/5*100);document.getElementById("bar").style.width=p+"%";document.getElementById("percent").textContent=p+"%"}
+function showPage(id){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll(".nav").forEach(n=>n.classList.toggle("active",n.dataset.page===id||(id==="words"||id==="grammar"||id==="listening"||id==="writing"||id==="quiz"||id==="lesson")&&n.dataset.page==="learn"));window.scrollTo({top:0,behavior:"smooth"});if(id==="progress")updateStats()}
+function renderPath(){let el=document.getElementById("path");el.innerHTML="";lessons.forEach((l,i)=>{let b=document.createElement("button");b.className="lesson "+(state.done.includes(i)?"done":i===state.done.length?"current":"locked");b.textContent=state.done.includes(i)?"✓":i===state.done.length?"★":"🔒";b.setAttribute("aria-label",l.title);b.onclick=()=>{if(i<=state.done.length)openLesson(i)};el.appendChild(b)})}
+let currentLesson=0;
+function openLesson(i){currentLesson=i;let l=lessons[i];document.getElementById("lessonTitle").textContent="الدرس "+(i+1)+": "+l.title;document.getElementById("lessonPrompt").textContent=l.prompt;let box=document.getElementById("lessonChoices");box.innerHTML="";document.getElementById("lessonFeedback").className="feedback";document.getElementById("completeLesson").style.display="none";l.choices.forEach((c,j)=>{let b=document.createElement("button");b.className="choice";b.textContent=c;b.onclick=()=>{box.querySelectorAll("button").forEach(x=>x.disabled=true);let f=document.getElementById("lessonFeedback");if(j===l.correct){f.textContent="أحسنت! إجابة صحيحة 🎉";f.className="feedback show good";document.getElementById("completeLesson").style.display="block"}else{f.textContent="ليست الإجابة الصحيحة. حاول في المرة القادمة.";f.className="feedback show bad";box.querySelectorAll("button").forEach(x=>x.disabled=false);b.disabled=false}};box.appendChild(b)});showPage("lesson")}
+function completeCurrentLesson(){if(!state.done.includes(currentLesson)){state.done.push(currentLesson);state.xp+=10;save()}renderPath();showPage("home")}
+const words=[["Apple","تفاحة","I eat an apple."],["Water","ماء","I drink water."],["Book","كتاب","This is my book."],["House","منزل","My house is big."],["Friend","صديق","He is my friend."]];
+function renderWord(){let w=words[state.wordIndex%words.length];document.getElementById("word").textContent=w[0];document.getElementById("meaning").textContent=w[1];document.getElementById("example").textContent=w[2]}
+function speech(t){if(!("speechSynthesis"in window)){alert("ميزة النطق غير مدعومة في هذا المتصفح.");return}let u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.85;speechSynthesis.speak(u)}
+function speakWord(){speech(words[state.wordIndex%words.length][0])}
+function nextWord(){state.wordIndex=(state.wordIndex+1)%words.length;renderWord();state.xp+=1;save()}
+function grammarAnswer(btn,ok){let f=document.getElementById("grammarFeedback");f.textContent=ok?"صحيح! She is happy.":"حاول مرة أخرى. مع She نستعمل is.";f.className="feedback show "+(ok?"good":"bad");if(ok){state.xp+=2;save()}}
+function listenAnswer(btn,ok){let f=document.getElementById("listenFeedback");f.textContent=ok?"ممتاز! إجابة صحيحة.":"ليست صحيحة، استمع مرة أخرى.";f.className="feedback show "+(ok?"good":"bad");if(ok){state.xp+=2;save()}}
+function checkWriting(){let t=document.getElementById("writingText").value.trim();let f=document.getElementById("writingFeedback");if(!t){f.textContent="اكتب جملة أولًا.";f.className="feedback show bad";return}let words=t.split(/\s+/).length;let hasCapital=/^[A-Z]/.test(t);let hasEnd=/[.!?]$/.test(t);let notes=[];if(!hasCapital)notes.push("ابدأ الجملة بحرف كبير.");if(!hasEnd)notes.push("ضع نقطة أو علامة مناسبة في النهاية.");if(words<3)notes.push("حاول كتابة جملة أطول قليلًا.");f.textContent=notes.length?"ملاحظات: "+notes.join(" "):"جيد! انتبه دائمًا إلى معنى الجملة وصحة القواعد.";f.className="feedback show "+(notes.length?"bad":"good");if(!notes.length){state.xp+=3;save()}}
+const questions=[{q:"ما معنى Book؟",a:["قلم","كتاب","نافذة"],c:1},{q:"اختر الصحيح: I ___ happy.",a:["am","is","are"],c:0},{q:"ما معنى Thank you؟",a:["من فضلك","صباح الخير","شكرًا"],c:2}];
+function renderQuestion(){let q=questions[state.quizIndex];document.getElementById("quizCount").textContent="السؤال "+(state.quizIndex+1)+" من 3";document.getElementById("question").textContent=q.q;let a=document.getElementById("answers");a.innerHTML="";document.getElementById("quizFeedback").className="feedback";document.getElementById("nextQuiz").style.display="none";q.a.forEach((v,i)=>{let b=document.createElement("button");b.className="choice";b.textContent=v;b.onclick=()=>{a.querySelectorAll("button").forEach(x=>x.disabled=true);let ok=i===q.c;b.classList.add(ok?"correct":"wrong");let f=document.getElementById("quizFeedback");f.textContent=ok?"إجابة صحيحة!":"الإجابة الصحيحة: "+q.a[q.c];f.className="feedback show "+(ok?"good":"bad");if(ok)state.quizScore++;document.getElementById("nextQuiz").style.display="block";document.getElementById("nextQuiz").textContent=state.quizIndex===2?"إنهاء الاختبار":"السؤال التالي";};a.appendChild(b)})}
+function nextQuestion(){if(state.quizIndex<2){state.quizIndex++;renderQuestion()}else{state.xp+=state.quizScore*3;save();document.getElementById("question").textContent="انتهى الاختبار! نتيجتك: "+state.quizScore+" من 3";document.getElementById("answers").innerHTML="";document.getElementById("quizFeedback").className="feedback";document.getElementById("nextQuiz").style.display="none";state.quizIndex=0;state.quizScore=0}}
+renderPath();updateStats();renderWord();renderQuestion();
+</script>
+</body></html>
